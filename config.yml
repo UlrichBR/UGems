@@ -1,0 +1,79 @@
+#Get all kinds of events visit https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html
+#Find 'data' of potions in https://www.minecraftinfo.com/idlist.htm
+#Find Flags in https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/ItemFlag.html
+#PLACEHOLDERS:
+# %ugems_has_account% - Return true/false
+# %ugems_amount% - Return amount of gems of player
+Plugin:
+  check-for-updates: false
+Config:
+  Tag: '&6&lU&2&lGems &8>> &e'
+  USE_LEGACY_MATERIAL: true
+  language: 'en_US'
+  maintenance: false
+  disable_op: false
+  disable_all_perms: false
+  disable_console: false
+  debug_errors: true
+  open_shop_on_empty_command: true
+  max_top_list: 10
+  block_witdraw: true
+  block_deposit: true
+  logs:
+    stacktrace: true
+    transations: true
+  DisabledWorlds:
+  - world_nether
+  short-materials: true
+
+Limits:
+  withdraw: 20736
+  add: 10000000
+  giveall: 10000000
+  set: 10000000
+  remove: 10000000
+
+Aliases:
+  cleariteminfos:
+  - cii
+  top:
+  - top
+  additem:
+  - additem
+  shop:
+  - loja
+  transfer:
+  - transferir
+  iteminfo:
+  - iinfo
+  - ii
+  withdraw:
+  - retirar
+  deposit_hand:
+  - mao
+  deposit_inv:
+  - inv
+  deposit:
+  - depositar
+  balance:
+  - ver
+  reload:
+  - recarregar
+  add:
+  - adicionar
+  remove:
+  - remover
+  set:
+  - setar
+  giveall:
+  - dartodos
+  help:
+  - ajuda
+
+Tasks:
+  save:
+    start: 600
+    next: 600
+  baltop:
+    start: 5
+    next: 600

@@ -1,0 +1,95 @@
+############################# important note #############################
+#
+#It is very important to use SONS and MATERIAL for your version of minecraft, this page is compiled for version 1.12 and should be placed in the version you are using.
+#
+# # MATERIAL>>
+# For 1.13 use https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+# For 1.12 or LESS use http://docs.codelanx.com/Bukkit/1.8/org/bukkit/Material.html
+#
+# # SOUND>>
+# For 1.13 use https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+# For 1.9 - 1.12 use https://hub.spigotmc.org/stash/proj...untilPath=src/main/java/org/bukkit/Sound.java
+# For 1.8 use http://docs.codelanx.com/Bukkit/1.8/org/bukkit/Sound.html
+#
+#Get all kinds of events visit https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html
+#Find 'data' of potions in https://www.minecraftinfo.com/idlist.htm
+#Find Flags in https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/ItemFlag.html
+#
+############################# important note #############################
+Drops:
+  mining:
+    enabled: true
+    inventory_drop: false
+    found:
+      sound: ''
+      actionbar: '&a&lFOUND %amount% %item_name%!'
+      title: '&aFound Gems%nl%&eX%amount% %item_name%'
+      message: '&c&l! &eYour found &b%amount% &eof &2%gem_type% %item_name%'
+    disabled_worlds:
+    - ''
+    blocks:
+      STONE: #ALL BLOCKS
+        chance: 0.10 #10%
+        min_drop: 1
+        max_drop: 5
+        drop_type: 'item'
+      LOG: #INCLUDE FARMS(LOG|COCOA|PUMPKIN|BEETROOT_BLOCK|CARROT|CROPS|POTATO|MELON_BLOCK|SUGAR_CANE_BLOCK|CACTUS|NETHER_WARTS)
+        chance: 0.10 #100%
+        min_drop: 100
+        max_drop: 500
+        drop_type: 'item'
+      EMERALD_ORE: #ALL BLOCKS
+        chance: 0.10 #10%
+        min_drop: 1
+        max_drop: 5
+        drop_type: 'item'
+  entity:
+    enabled: true
+    inventory_drop: false
+    found:
+      sound: ''
+      actionbar: '&a&lFOUND %amount% %item_name%!'
+      title: '&aFound Gems%nl%&eX%amount% %item_name%'
+      message: '&c&l! &eYour found &b%amount% &eof &2%gem_type% %item_name%'
+    disabled_worlds:
+    - ''
+    entities:
+      PLAYER: #PLAYER ONLINE
+        chance: 0.10
+        min_drop: 1
+        max_drop: 5
+        steal: true #ONLY PLAYERS (WITH THIS OPTION ON THE PLAYER SO DROP GEMS IF YOU HAVE ON YOUR ACCOUNT)
+        drop_type: 'item'
+      COW: #ALL MOBS
+        chance: 0.10
+        min_drop: 1
+        max_drop: 5
+        only_attacker: true #ONLY MOBS (USE THIS OPTION FOR AUTOMATIC FARMS, EXAMPLE FARMS OF GOLEM)
+        drop_type: 'item'
+  fishing:
+    enabled: true
+    inventory_drop: false
+    found:
+      sound: ''
+      actionbar: '&a&lFOUND %amount% %item_name%!'
+      title: '&aFound Gems%nl%&eX%amount% %item_name%'
+      message: '&c&l! &eYour found &b%amount% &eof &2%gem_type% %item_name%'
+    disabled_worlds:
+    - ''
+    caughts:
+      RAW_FISH: #ANY FISH
+        chance: 0.10
+        min_drop: 1
+        max_drop: 5
+        drop_type: 'item'
+      ENCHANTED_BOOK: #CAUGHT ITEMS
+        chance: 0.10
+        min_drop: 1
+        max_drop: 5
+        drop_type: 'item'
+  hooks: #FUTURE UPDATE
+    enabled: true
+    inventory_drop: false
+    disabled_worlds:
+    - ''
+    plugin_event: {}
