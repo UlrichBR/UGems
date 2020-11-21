@@ -19,6 +19,7 @@ Config:
   max_top_list: 10
   block_witdraw: true
   block_deposit: true
+  block_transfer: true
   logs:
     stacktrace: true
     transations: true
