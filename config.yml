@@ -5,7 +5,8 @@
 # %ugems_has_account% - Return true/false
 # %ugems_amount% - Return amount of gems of player
 Plugin:
-  check-for-updates: false
+  check-for-updates: true
+  use-metrics: true
 Config:
   Tag: '&6&lU&2&lGems &8>> &e'
   USE_LEGACY_MATERIAL: true
@@ -19,13 +20,13 @@ Config:
   max_top_list: 10
   block_witdraw: true
   block_deposit: true
-  block_transfer: true
   logs:
     stacktrace: true
     transations: true
   DisabledWorlds:
   - world_nether
   short-materials: true
+  aliases_tabcomplete: true
 
 Limits:
   withdraw: 20736
@@ -35,41 +36,46 @@ Limits:
   remove: 10000000
 
 Aliases:
-  cleariteminfos:
-  - cii
-  top:
-  - top
-  additem:
-  - additem
-  shop:
-  - loja
-  transfer:
-  - transferir
-  iteminfo:
-  - iinfo
-  - ii
-  withdraw:
-  - retirar
-  deposit_hand:
-  - mao
-  deposit_inv:
-  - inv
-  deposit:
-  - depositar
-  balance:
-  - ver
-  reload:
-  - recarregar
-  add:
-  - adicionar
-  remove:
-  - remover
-  set:
-  - setar
-  giveall:
-  - dartodos
-  help:
-  - ajuda
+  gems:
+    help:
+    - 'ajuda'
+    shop:
+    - 'loja'
+    top:
+    - 'top'
+    transfer:
+    - 'transferir'
+    deposit:
+    - 'depositar'
+    - 'pagar'
+    withdraw:
+    - 'retirar'
+    balance:
+    - 'balanco'
+  ugems:
+    help:
+    - 'ajuda'
+    cleariteminfos:
+    - 'cii'
+    additem:
+    - 'additem'
+    iteminfo:
+    - 'iinfo'
+    - 'ii'
+    deposit_hand:
+    - 'mao'
+    deposit_inv:
+    - 'inv'
+    reload:
+    - 'recarregar'
+    add:
+    - 'adicionar'
+    remove:
+    - 'remover'
+    set:
+    - 'setar'
+    giveall:
+    - 'dartodos'
 
 Tasks:
   save:
