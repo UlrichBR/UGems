@@ -6,6 +6,12 @@ Messages:
     wait: '&cWait %time% secs...'
     no_permission_gui: '&cYou can not open this.'
   gems_additem_to_player: '%tag% &eYou added &2♦%amount% Item gems &efor &a%player%'
+  gems_clearall_confirm: ' &8Type &f&lCONFIRM &r&8in the chat to confirm or type &f&lCANCEL &r&8to cancel!'
+  error_startaction: '%tag% &cThere was an error running this.'
+  console_confirm: '%tag% &cYou need to confirm the action using CONFIRM at the end of the command.'
+  error_clearall: '%tag% &cAn error occurred while clearing all.'
+  success_clearall: '%tag% &eAll accounts have been successfully cleared.'
+  action_clearall_error: '%tag% &cYou did not enter a confirmation and the action was canceled!'
   received_gems_item: ' &c&l! &eYou received &2♦%amount% Item gem(s)&e.'
   invalid_gui: '%tag% &cThis menu is invalid.'
   gems_maintenance: '%tag% &cGems are in maintenance mode'
@@ -61,7 +67,7 @@ Messages:
     error_create: '%tag% &cError creating store, check fields.'
     success_create: '%tag% &eStore created successfully.'
     error_value: '%tag% &cError when creating the board, use values ​​in &4(line 3) &cfollowing this example: buy = &bb 100 &c or sell = &bs 100 &c or even both together &bb 100: s 100'
-    error_item: '%tag% &4Caution: &cthe item with id &b%item_id% &cappears to be invalid.'
+    error_item: '%tag% &4Caution: &cthe item with id &b%item_id% &cappears to be invalid, use &b/ugems ii &cto find out the ID'
     success_breaked: '%tag% &eYou broke the store  sign.'
     data_redefined: '%tag% &eThe items DATA field is in error and has been reset to &b0.'
     max_amount: '%tag% &cValue has been reset to &b%amount% &cis the maximum allowed.'
@@ -134,6 +140,9 @@ Messages:
       giveall:
         text: 'Add selected amount to all online players.'
         usage: ' &b/ugems giveall <amount>'
+      clearall:
+        text: 'Remove gems from all player.'
+        usage: ' &b/ugems clearall'
       iteminfo:
         text: 'Get info of edited item to use in sign shop.'
         usage: ' &b/ugems iteminfo [-advanced/-adv]'
