@@ -9,6 +9,8 @@ Plugin:
   use-metrics: true
 Config:
   Tag: '&6&lU&2&lGems &8>> &e'
+  confirm: 'CONFIRM'
+  confirm_case_sensitive: true
   USE_LEGACY_MATERIAL: true
   language: 'en_US'
   maintenance: false
@@ -72,6 +74,8 @@ Aliases:
     - 'adicionar'
     remove:
     - 'remover'
+    clearall:
+    - 'limpartodos'
     set:
     - 'setar'
     giveall:
