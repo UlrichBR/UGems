@@ -8,6 +8,7 @@ Plugin:
   check-for-updates: true
   use-metrics: true
 Config:
+  USE_LEGACY_MATERIAL: true
   Tag: '&6&lU&2&lGems &8>> &e'
   confirm: 'CONFIRM'
   confirm_case_sensitive: true
