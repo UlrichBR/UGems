@@ -1,0 +1,47 @@
+#PLACEHOLDERS WITH PLACEHOLDERAPI:
+# %ugems_has_account% - Return true/false
+# %ugems_amount% - Return amount gems of player
+# %ugems_amount_formated% - Return formated amount gems of player
+#
+Plugin:
+  check-for-updates: true
+  use-metrics: true
+
+Config:
+  Tag: '&6&lUltimate&2&lGems &8>> &e'
+  date-format: 'dd/mm/yyy HH:mm:ss'
+  confirm: 'CONFIRM'
+  confirm_case_sensitive: true
+  maintenance: false
+  disable_op: false
+  disable_all_perms: false
+  disable_console: false
+  debug_errors: true
+  open_shop_on_empty_command: true
+  max_top_list: 10
+  logs:
+    stacktrace: true
+    transations: true
+  DisabledWorlds:
+  - world_nether
+  short-materials: true
+  aliases_tabcomplete: true
+  blocks:
+    block_witdraw: false
+    block_deposit: false
+    block_transfer: false
+
+Limits:
+  withdraw: 20736
+  add: 10000000
+  giveall: 10000000
+  set: 10000000
+  remove: 10000000
+
+Tasks:
+  save:
+    start: 600
+    next: 600
+  baltop:
+    start: 5
+    next: 600

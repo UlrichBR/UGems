@@ -1,0 +1,11 @@
+Storage:
+  type: 'yaml' #mysql/yaml/sqlite
+  mysql:
+    host: 'localhost'
+    user: 'YOUR-USERNAME-HERE'
+    pass: 'YOUR-PASSWORD-HERE'
+    port: 3306
+    base: 'YOUR-DATABASE-HERE'
+  tables:
+    table: 'ugems'
+    items_table: 'ugems_items'

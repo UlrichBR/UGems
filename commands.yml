@@ -1,0 +1,294 @@
+Commands:
+  list:
+    gems:
+      separer4:
+        permission: ''
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: ''
+        show:
+            on_help: ' &8Gems Manager: &6[?]'
+            on_help_json:
+              hover_text: '&aGems manager description.'
+              click_type: ''
+              click_action: ''
+              raw_base_color: 'YELLOW'
+      help:
+        permission: 'gems.player.help'
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: 'ajuda'
+        show:
+            on_help: ' &b/gems help &7-&e Show help menu.'
+            on_help_json:
+              hover_text: '&aClick to view help of Gems.'
+              click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+              click_action: '/gems help'
+              raw_base_color: 'YELLOW'
+            on_success: '%tag% &aYou are seeing the help!'
+            on_error: '%tag%&cError to show text.'
+            on_usage: '%tag% &cUse &b/gems help'
+        sound:
+            on_help: ''
+            on_success: ''
+            on_error: ''
+            extra:
+              volume: 10
+              pitch: 1
+        title:
+            on_help: ''
+            on_success: ''
+            on_error: ''
+        actionbar:
+            on_help: ''
+            on_success: ''
+            on_error: ''
+      shop:
+        permission: 'gems.player.shop'
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: 'loja'
+        show:
+            on_help: ' &b/gems shop &7-&e Open the Gems shop.'
+            on_help_json:
+              hover_text: '&aClick to open Gems shop.'
+              click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+              click_action: '/gems shop'
+              raw_base_color: 'YELLOW'
+            on_success: '%tag% &aSuccess.'
+            on_error: '%tag%&cError to open shop.'
+            on_usage: '%tag% &cUse &b/gems shop'
+      balance:
+        permission: 'gems.player.balance'
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: 'balance'
+        show:
+            on_help: ' &b/gems balance <player> &7-&e View the Gems of players.'
+            on_help_json:
+              hover_text: '&aClick to view Gems of players.'
+              click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+              click_action: '/gems balance <player>'
+              raw_base_color: 'YELLOW'
+            on_success: '%tag% &aPlayer %player% has &2%amount% gems.'
+            on_error: '%tag%&cError to use.'
+            on_usage: '%tag% &cUse &b/gems balance <player>'
+      transfer:
+        permission: 'gems.player.transfer'
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: 'transfer'
+        show:
+            on_help: ' &b/gems transfer <player> <amount> &7-&e Transfer gems to player.'
+            on_help_json:
+              hover_text: '&aClick to transfer gems to player.'
+              click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+              click_action: '/gems transfer <player> <amount>'
+              raw_base_color: 'YELLOW'
+            on_success: '%tag% &aYou transferred &2%amount% gems &ato the player &a%player%'
+            on_error: '%tag%&cError to show text.'
+            on_usage: '%tag% &cUse &b/gems transfer <player> <amount>'
+      withdraw:
+        permission: 'gems.player.withdraw'
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: 'transfer'
+        show:
+            on_help: ' &b/gems withdraw <amount> &7-&e Remove Gems as item.'
+            on_help_json:
+              hover_text: '&aClick to remove Gems as item.'
+              click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+              click_action: '/gems withdraw <amount>'
+              raw_base_color: 'YELLOW'
+            on_success: '%tag% &aYou have removed &2%amount% gems &aas an item.'
+            on_error: '%tag% &cError while withdrawing'
+            on_usage: '%tag% &cUse &b/gems withdraw <amount>'
+      deposit:
+        permission: 'gems.player.deposit'
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: 'transfer'
+        show:
+            on_help: ' &b/gems deposit <hand/inv> &7-&e Send items from inventory to account.'
+            on_help_json:
+              hover_text: '&aClick to send items from inventory to account.'
+              click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+              click_action: '/gems deposit <hand/inv>'
+              raw_base_color: 'YELLOW'
+            on_success: '%tag% &aYou have deposited &2%amount% gems.'
+            on_error: '%tag%&cError to deposit.'
+            on_usage: '%tag% &cUse &b/gems deposit <hand/inv>'
+      top:
+        permission: 'gems.player.top'
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: 'top'
+        show:
+            on_help: ' &b/gems top &7-&e See the top Gems.'
+            on_help_json:
+              hover_text: '&aClick to see the top Gems.'
+              click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+              click_action: '/gems top'
+              raw_base_color: 'YELLOW'
+            on_success: '%tag% &aSuccess'
+            on_error: '%tag%&cError to vew top gems.'
+            on_usage: '%tag% &cUse &b/gems top'
+    ugems:
+      separer4:
+        permission: ''
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: ''
+        show:
+            on_help: ' &8Admin Gems Manager: &6[?]'
+            on_help_json:
+              hover_text: '&aAdmin Gems manager description.'
+              click_type: ''
+              click_action: ''
+              raw_base_color: 'YELLOW'
+      help:
+        permission: 'gems.admin.help'
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: 'ajuda'
+        show:
+            on_help: ' &b/ugems help &7-&e Show help menu.'
+            on_help_json:
+              hover_text: '&aClick to view help of Admin Gems.'
+              click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+              click_action: '/ugems help'
+              raw_base_color: 'YELLOW'
+            on_success: '%tag% &aSuccess!'
+            on_error: '%tag%&cError to show help.'
+            on_usage: '%tag% &cUse &b/ugems help'
+        sound:
+            on_help: ''
+            on_success: ''
+            on_error: ''
+            extra:
+              volume: 10
+              pitch: 1
+        title:
+            on_help: ''
+            on_success: ''
+            on_error: ''
+        actionbar:
+            on_help: ''
+            on_success: ''
+            on_error: ''
+      reload:
+        permission: 'gems.admin.reload'
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: 'reload'
+        show:
+            on_help: ' &b/ugems reload &7-&e Reload the settings.'
+            on_help_json:
+              hover_text: '&aClick to reload the settings.'
+              click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+              click_action: '/ugems reload'
+              raw_base_color: 'YELLOW'
+            on_success: '%tag% &aSettings reloaded successfully!'
+            on_error: '%tag% &cThere was an error loading settings'
+            on_usage: '%tag% &cUse &b/ugems reload'
+      add:
+        permission: 'gems.admin.add'
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: 'add'
+        show:
+            on_help: ' &b/ugems add <player> <amount> &7-&e Add gems to the player.'
+            on_help_json:
+              hover_text: '&aClick to add gems to the player.'
+              click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+              click_action: '/ugems add <player> <amount>'
+              raw_base_color: 'YELLOW'
+            on_success: '%tag% &aYou have added &2%amount% gems &afor player &a%player%'
+            on_error: '%tag% &cThere was an error adding.'
+            on_usage: '%tag% &cUse &b/ugems add <player> <amount>'
+      additem:
+        permission: 'gems.admin.additem'
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: 'additem'
+        show:
+            on_help: ' &b/ugems additem <player> <amount> &7-&e Add item gems to the player.'
+            on_help_json:
+              hover_text: '&aClick to add item gems to the player.'
+              click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+              click_action: '/ugems additem <player> <amount>'
+              raw_base_color: 'YELLOW'
+            on_success: '%tag% &aYou have added &2%amount% gems &ain items for player &a%player%'
+            on_error: '%tag% &cThere was an error adding.'
+            on_usage: '%tag% &cUse &b/ugems additem <player> <amount>'
+      remove:
+        permission: 'gems.admin.remove'
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: 'remove'
+        show:
+            on_help: ' &b/ugems remove <player> <amount> &7-&e Remove gems from the player.'
+            on_help_json:
+              hover_text: '&aClick to remove gems from the player.'
+              click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+              click_action: '/ugems remove <player> <amount>'
+              raw_base_color: 'YELLOW'
+            on_success: '%tag% &aYou have removed &2%amount% gems &afrom player &a%player%'
+            on_error: '%tag% &cThere was an error removing.'
+            on_usage: '%tag% &cUse &b/ugems remove <player> <amount>'
+      set:
+        permission: 'gems.admin.set'
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: 'set'
+        show:
+            on_help: ' &b/ugems set <player> <amount> &7-&e Set gems of a player.'
+            on_help_json:
+              hover_text: '&aClick to set gems of a player.'
+              click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+              click_action: '/ugems set <player> <amount>'
+              raw_base_color: 'YELLOW'
+            on_success: '%tag% &aYou have set gems from &a%player% &ato &2%amount% gems'
+            on_error: '%tag% &cAn error occurred while setting'
+            on_usage: '%tag% &cUse &b/ugems set <player> <amount>'
+      giveall:
+        permission: 'gems.admin.giveall'
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: 'giveall'
+        show:
+            on_help: ' &b/ugems giveall <amount> &7-&e Add Gems to all online players.'
+            on_help_json:
+              hover_text: '&aClick to add Gems to all online players.'
+              click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+              click_action: '/ugems giveall <amount>'
+              raw_base_color: 'YELLOW'
+            on_success: '%tag% &aYou sent &2%amount% gems &ato &b%players_count% players&a.'
+            on_error: '%tag% &cThere was an error sending &2%amount% gems &cto all players.'
+            on_usage: '%tag% &cUse &b/ugems giveall <amount>'
+      clearall:
+        permission: 'gems.admin.clearall'
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: 'clearall'
+        show:
+            on_help: ' &b/ugems clearall &7-&e Remove gems from all player.'
+            on_help_json:
+              hover_text: '&aClick to remove gems from all player.'
+              click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+              click_action: '/ugems clearall'
+              raw_base_color: 'YELLOW'
+            on_success: '%tag% &aYou have successfully cleared players gems!'
+            on_error: '%tag% &cAn error occurred while clearing players gems.'
+            on_usage: '%tag% &cUse &b/ugems clearall'
+      iteminfo:
+        permission: 'gems.admin.iteminfo'
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: 'iteminfo'
+        show:
+            on_help: ' &b/ugems iteminfo [-adv] &7-&e Get info of edited item to use in sign shop.'
+            on_help_json:
+              hover_text: '&aClick to get info of edited item to use in sign shop.'
+              click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+              click_action: '/ugems iteminfo [-adv]'
+              raw_base_color: 'YELLOW'
+            on_success: '%tag% &aSuccess!'
+            on_error: '%tag%&cError.'
+            on_usage: '%tag% &cUse &b/ugems iteminfo [-adv]'
+      cleariteminfos:
+        permission: 'gems.admin.cleariteminfos'
+        no_permission_message: '%tag% &cYou dont have permission for this.'
+        alias: 'cleariteminfos'
+        show:
+            on_help: ' &b/ugems cleariteminfos &7-&e Clear all data of item infos of current DB (inreversible).'
+            on_help_json:
+              hover_text: '&aClick to clear all data of item infos of current DB (inreversible).'
+              click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+              click_action: '/ugems cleariteminfos'
+              raw_base_color: 'YELLOW'
+            on_success: '%tag% &aYou have successfully cleared the items'
+            on_error: '%tag% &cThere was an error clearing items'
+            on_usage: '%tag% &cUse &b/ugems cleariteminfos'

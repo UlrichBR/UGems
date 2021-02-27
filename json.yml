@@ -1,0 +1,23 @@
+Json:
+  simple:
+    command_unknown:
+      center: false
+      raw_text: '%tag% &cUnknown command, &b[CLICK HERE] &cor use &d/ugems help &cto see the list of available commands.'
+      hover_text: '&aClick here to view Help.'
+      click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+      click_action: '/ugems help'
+      raw_base_color: 'RED'
+    command_unknown_player:
+      center: false
+      raw_text: '%tag% &cUnknown command, &b[CLICK HERE] &cor use &d/gems help &cto see the list of available commands.'
+      hover_text: '&aClick here to view Help.'
+      click_type: 'RUN_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+      click_action: '/gems help'
+      raw_base_color: 'RED'
+    gems_top_format:
+      center: false
+      raw_text: ' &6%num%° &7- &a%player% &7- &2%amount% gem(s)'
+      hover_text: '&aClick here to view Help.'
+      click_type: 'SUGGEST_COMMAND' # SUGGEST_COMMAND, RUN_COMMAND, OPEN_URL
+      click_action: '/gems balance %player%'
+      raw_base_color: 'RED'
