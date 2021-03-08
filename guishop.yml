@@ -18,15 +18,24 @@
 #
 ############################# important note #############################
 Cosmetic:
-  item:
+  item: # to disable cosmetics use item: {}
     material: 'STAINED_GLASS_PANE'
     data: 7
     amount: 1
     name: ' '
     flags:
     - 'HIDE_ENCHANTS'
+    enchants:
+    - 'HIDE_ENCHANTS'
+    nbt: #This can be used on all items in this file, To not use just erase this part.
+      string:
+      - 'NbtExample:teste'
+      int:
+      - 'NbtExample2:0001'
 Gui:
   index:
+    permission: ''
+    permission-message: ''
     InventoryName: '&8Example store'
     InventorySize: 36
     OpenSound: ''
@@ -50,6 +59,11 @@ Gui:
         right-commands:
         - '[CLOSEGUI]'
         - '[OPENGUI] loja_itens'
+        nbt: #This can be used on all items in this file, To not use just erase this part.
+          string:
+          - 'NbtExample:teste'
+          int:
+          - 'NbtExample2:0001'
       vips:
         slot: 16
         id: SKULL_ITEM
@@ -136,6 +150,8 @@ Gui:
         name: ' '
         imitate-to-slots: '28;29;30;32;33;35'
   loja_ferramentas: #imitate-to-slots
+    permission: 'gems.gui.open.loja_ferramentas'
+    permission-message: '%tag% &cYou do not have permission to view this store.'
     InventoryName: '&8Example - Weapons and Tools'
     InventorySize: 54
     OpenSound: ''
@@ -151,6 +167,8 @@ Gui:
         - ' &eItems with enchantment.'
         imitate-to-slots: '17'
       '10':
+        permission: 'gems.buy.loja_ferramentas.10'
+        permission-message: '%tag% &cYou are not allowed to purchase this item.'
         slot: 10
         id: DIAMOND_SWORD
         amount: 1
@@ -173,6 +191,11 @@ Gui:
         - '[CONSOLE] give {player} minecraft:diamond_sword 1 0 {ench:[{id:16,lvl:6},{id:34,lvl:6},{id:20,lvl:6},{id:20,lvl:6},{id:21,lvl:6}], display:{Lore:[§7Kit: §fCASH, §7Player: §f{player}]}}'
         right-commands:
         - '[CONSOLE] give {player} minecraft:diamond_sword 1 0 {ench:[{id:16,lvl:6},{id:34,lvl:6},{id:20,lvl:6},{id:20,lvl:6},{id:21,lvl:6}], display:{Lore:[§7Kit: §fCASH, §7Player: §f{player}]}}'
+        nbt: #This can be used on all items in this file, To not use just erase this part.
+          string:
+          - 'NbtExample:teste'
+          int:
+          - 'NbtExample2:0001'
       come_back:
         slot: 49
         id: ARROW
@@ -214,11 +237,15 @@ Gui:
         name: ' '
         imitate-to-slots: '46;47;48;50;51;53'
   loja_vips:
+    permission: ''
+    permission-message: ''
     InventoryName: 'Example - VIP Packages'
     InventorySize: 54
     OpenSound: ''
     Items:
       '1':
+        permission: 'gems.buy.loja_ferramentas.10'
+        permission-message: '%tag% &cYou are not allowed to purchase this item.'
         slot: 10
         id: GOLD_BLOCK
         amount: 30
@@ -243,6 +270,11 @@ Gui:
         - '[CONSOLE] addvip {player} 1 30'
         - '[CLOSEGUI]'
         sound: ''
+        nbt: #This can be used on all items in this file, To not use just erase this part.
+          string:
+          - 'NbtExample:teste'
+          int:
+          - 'NbtExample2:0001'
       '4':
         slot: 13
         id: DIAMOND_BLOCK
@@ -334,11 +366,15 @@ Gui:
         name: ' '
         imitate-to-slots: '46;47;48;50;51;53'
   loja_itens:
+    permission: ''
+    permission-message: ''
     InventoryName: 'Example - Mob Spawners'
     InventorySize: 54
     OpenSound: ''
     Items:
       spawnerslist:
+        permission: 'gems.buy.loja_ferramentas.10'
+        permission-message: '%tag% &cYou are not allowed to purchase this item.'
         slot: 9
         id: STAINED_GLASS_PANE
         amount: 1
@@ -368,6 +404,11 @@ Gui:
         right-commands:
         - '[CONSOLE] es give {player} zombie 3 1'
         sound: ''
+        nbt: #This can be used on all items in this file, To not use just erase this part.
+          string:
+          - 'NbtExample:teste'
+          int:
+          - 'NbtExample2:0001'
       come_back:
         slot: 49
         id: ARROW
